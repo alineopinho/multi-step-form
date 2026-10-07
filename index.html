@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
@@ -15,112 +15,247 @@
   </style>
 </head>
 <body>
+  <main>
+    <aside class="sidebar-start">
+      <nav aria-label="Etapas do formulário">
+        <ol>
+          <li>
+            <span>1</span>
+            <div>
+              <small>Step 1</small>
+              <strong>Your info</strong>
+            </div>
+          </li>
 
-  <!-- Sidebar start -->
+          <li>
+            <span>2</span>
+            <div>
+              <small>Step 2</small>
+              <strong>Select plan</strong>
+            </div>
+          </li>
 
-  Step 1
-  Your info
+          <li>
+            <span>3</span>
+            <div>
+              <small>Step 3</small>
+              <strong>Add-ons</strong>
+            </div>
+          </li>
 
-  Step 2
-  Select plan
+          <li>
+            <span>4</span>
+            <div>
+              <small>Step 4</small>
+              <strong>Summary</strong>
+            </div>
+          </li>
+        </ol>
+      </nav>
+    </aside>
 
-  Step 3
-  Add-ons
+    <form action="">
+      <section class="step step-1">
+        <header>
+          <h1>Personal info</h1>
+          <p>Please provide your name, email address, and phone number.</p>
+        </header>
 
-  Step 4
-  Summary
+        <label for="name">Name</label>
+        <input
+          type="text"
+          id="name"
+          name="name"
+          placeholder="e.g. Stephen King"
+          required
+        >
 
-  <!-- Sidebar end -->
+        <label for="email">Email Address</label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          placeholder="e.g. stephenking@lorem.com"
+          required
+        >
 
-  <!-- Step 1 start -->
+        <label for="phone">Phone Number</label>
+        <input
+          type="tel"
+          id="phone"
+          name="phone"
+          placeholder="e.g. +1 234 567 890"
+          required
+        >
 
-  Personal info
-  Please provide your name, email address, and phone number.
+        <button type="button">Next Step</button>
+      </section>
 
-  Name
-  e.g. Stephen King
+      <section class="step step-2">
+        <header>
+          <h1>Select your plan</h1>
+          <p>You have the option of monthly or yearly billing.</p>
+        </header>
 
-  Email Address
-  e.g. stephenking@lorem.com
+        <fieldset>
+          <legend>Select your plan</legend>
 
-  Phone Number
-  e.g. +1 234 567 890
+          <label>
+            <input type="radio" name="plan" value="arcade" required>
+            <img src="assets/images/icon-arcade.svg" alt="">
+            <span>Arcade</span>
+            <small>$9/mo</small>
+          </label>
 
-  Next Step
+          <label>
+            <input type="radio" name="plan" value="advanced">
+            <img src="assets/images/icon-advanced.svg" alt="">
+            <span>Advanced</span>
+            <small>$12/mo</small>
+          </label>
 
-  <!-- Step 1 end -->
+          <label>
+            <input type="radio" name="plan" value="pro">
+            <img src="assets/images/icon-pro.svg" alt="">
+            <span>Pro</span>
+            <small>$15/mo</small>
+          </label>
 
-  <!-- Step 2 start -->
+          <div class="billing-toggle">
+            <span>Monthly</span>
 
-  Select your plan
-  You have the option of monthly or yearly billing.
+            <label class="switch">
+              <input
+                type="checkbox"
+                id="billing"
+                name="billing"
+              >
+              <span class="slider"></span>
+            </label>
 
-  Arcade
-  $9/mo
+            <span>Yearly</span>
+          </div>
+        </fieldset>
 
-  Advanced
-  $12/mo
+        <div class="step-actions">
+          <button type="button">Go Back</button>
+          <button type="button">Next Step</button>
+        </div>
+      </section>
 
-  Pro
-  $15/mo
+      <section class="step step-3">
+        <header>
+          <h1>Pick add-ons</h1>
+          <p>Add-ons help enhance your gaming experience.</p>
+        </header>
 
-  Monthly
-  Yearly
+        <fieldset>
+          <legend>Choose your add-ons</legend>
 
-  Go Back
-  Next Step
+          <label class="addon-option">
+            <input
+              type="checkbox"
+              name="addons"
+              value="online-service"
+            >
 
-  <!-- Step 2 end -->
+            <div class="addon-info">
+              <span>Online service</span>
+              <small>Access to multiplayer games</small>
+            </div>
 
-  <!-- Step 3 start -->
+            <span class="addon-price">+$1/mo</span>
+          </label>
 
-  Pick add-ons
-  Add-ons help enhance your gaming experience.
+          <label class="addon-option">
+            <input
+              type="checkbox"
+              name="addons"
+              value="larger-storage"
+            >
 
-  Online service
-  Access to multiplayer games
-  +$1/mo
+            <div class="addon-info">
+              <span>Larger storage</span>
+              <small>Extra 1TB of cloud save</small>
+            </div>
 
-  Larger storage
-  Extra 1TB of cloud save
-  +$2/mo
+            <span class="addon-price">+$2/mo</span>
+          </label>
 
-  Customizable Profile
-  Custom theme on your profile
-  +$2/mo
+          <label class="addon-option">
+            <input
+              type="checkbox"
+              name="addons"
+              value="customizable-profile"
+            >
 
-  Go Back
-  Next Step
+            <div class="addon-info">
+              <span>Customizable profile</span>
+              <small>Custom theme on your profile</small>
+            </div>
 
-  <!-- Step 3 end -->
+            <span class="addon-price">+$2/mo</span>
+          </label>
+        </fieldset>
 
-  <!-- Step 4 start -->
+        <div class="step-actions">
+          <button type="button">Go Back</button>
+          <button type="button">Next Step</button>
+        </div>
+      </section>
 
-  Finishing up
-  Double-check everything looks OK before confirming.
+      <section class="step step-4">
+        <header>
+          <h1>Finishing up</h1>
+          <p>Double-check everything looks OK before confirming.</p>
+        </header>
 
-  <!-- Dynamically add subscription and add-on selections here -->
+        <div class="summary">
+          <div class="summary-plan">
+            <div>
+              <strong id="summary-plan-name"></strong>
+              <button type="button" id="change-plan">Change</button>
+            </div>
 
-  Total (per month/year)
+            <span id="summary-plan-price"></span>
+          </div>
 
-  Go Back
-  Confirm
+          <div id="summary-addons">
+            <!-- JavaScript adiciona os add-ons escolhidos aqui -->
+          </div>
+        </div>
 
-  <!-- Step 4 end -->
+        <div class="summary-total">
+          <span id="summary-total-label">Total</span>
+          <strong id="summary-total-price"></strong>
+        </div>
 
-  <!-- Step 5 start -->
+        <div class="step-actions">
+          <button type="button">Go Back</button>
+          <button type="submit">Confirm</button>
+        </div>
+      </section>
 
-  Thank you!
+      <section class="step step-5">
+        <img
+          src="assets/images/icon-thank-you.svg"
+          alt=""
+        >
 
-  Thanks for confirming your subscription! We hope you have fun 
-  using our platform. If you ever need support, please feel free 
-  to email us at support@loremgaming.com.
+        <h1>Thank you!</h1>
 
-  <!-- Step 5 end -->
-  
+        <p>
+          Thanks for confirming your subscription! We hope you have fun
+          using our platform. If you ever need support, please feel free
+          to email us at support@loremgaming.com.
+        </p>
+      </section>
+    </form>  
+  </main>
+
   <footer class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+    Coded by <a href="https://github.com/alineopinho/">Aline OP</a>.
   </footer>
 </body>
 </html>
